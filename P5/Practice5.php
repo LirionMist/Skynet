@@ -14,31 +14,31 @@ try {
     $result = $connection->query('SELECT * FROM  `product`');
 
     if ($result){
-    if ($result->rowCount() == 0) {
-        echo "Запрос не вернул результатов.";
-    } else {
-
-        echo "<table border='1'>";
-        // Вывод заголовков таблицы
-        echo "<tr>";
-        
-        for ($i = 0; $i < $result->columnCount(); $i++) {
-            $column = $result->getColumnMeta($i);
-            echo "<th>{$column['name']}</th>";
-        }
-        echo "</tr>";
-        
-        while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+        if ($result->rowCount() == 0) {
+            echo "Запрос не вернул результатов.";
+        } else {
+    
+            echo "<table border='1'>";
+            // Вывод заголовков таблицы
             echo "<tr>";
-            foreach ($row as $value) {
-                echo "<td>".$value."</td>";
+            
+            for ($i = 0; $i < $result->columnCount(); $i++) {
+                $column = $result->getColumnMeta($i);
+                echo "<th>{$column['name']}</th>";
             }
             echo "</tr>";
-        }
-        echo "</table>";
-        }}
-
-            else {
-                echo "Запросвыполнен с ошибкой ";
+            
+            while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+                echo "<tr>";
+                foreach ($row as $value) {
+                    echo "<td>".$value."</td>";
+                }
+                echo "</tr>";
             }
+            echo "</table>";
+            }}
+    
+                else {
+                    echo "Запросвыполнен с ошибкой ";
+                }
 ?>
