@@ -47,8 +47,10 @@
     exit( 'Ошибка регистрации... (Пользователь уже существует)' );
     }
 
+    $pwd = $_POST['password'];
+    $pwd_hash = password_hash($pwd, PASSWORD_DEFAULT);
     // Create new USER
-    $data = [ $_POST['login'], $_POST['password'], $_POST['email'] ];
+    $data = [ $_POST['login'], $pwd_hash, $_POST['email'] ];
     $res = $connection->prepare( "INSERT INTO `users` (`login`, `password`, `email`) VALUES (?,?,?);" ); 
     $res = $res->execute( $data);
 
