@@ -1,26 +1,22 @@
 <?php 
 
     if( $_SERVER['REQUEST_METHOD'] !== 'POST' ) exit;
+
+    $link = "<a href ='index.php'><button>На главную</button></a>" ;
     
     if(empty($_POST['login']) || empty($_POST['email']) || empty($_POST['password']) ||empty($_POST['repassword'])) {
         echo "Необходимые поля не зполнены";
     }
 
     if (strlen($_POST['login']) < 9) {
-        exit('Логин должен быть минимум 8 символов <form action="index.php" method="post">
-        <p style="text-align: left"><button>На главную</button>
-        </form>');
+        exit('Логин должен быть минимум 8 символов ' . $link);
     }
 
     if (strlen($_POST['password']) < 8) {
-        exit('Пароль должен быть минимум 8 символов <form action="index.php" method="post">
-        <p style="text-align: left"><button>На главную</button>
-        </form>');
+        exit('Пароль должен быть минимум 8 символов ' . $link);
     }
 
-    if($_POST['password'] !== $_POST['repassword']) exit('пароли не совпадают <form action="index.php" method="post">
-    <p style="text-align: left"><button>На главную</button>
-    </form>');
+    if($_POST['password'] !== $_POST['repassword']) exit('пароли не совпадают' . $link);
 
     //conection to database
     $host = "db4.myarena.ru";      
@@ -58,9 +54,7 @@
         exit( 'Регистрация прошла успешно' );
     }
     
-    exit('Ошибка регистрации... (2) <form action="index.php" method="post">
-    <p style="text-align: left"><button>На главную</button>
-    </form>' );
+    exit('Ошибка регистрации... (2) ' . $link );
     ?>
 
  <form action="index.php" method="post">
