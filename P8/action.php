@@ -31,7 +31,7 @@
     $select->execute([$userLogin, $userLogin]);
     $row = $select->fetch();
     
-    if ($row && password_verify($userPassword, $row['password'])) exit("login successful");
+    if ($row && password_verify($userPassword, $row['password'])) exit("login successful". $link);
     
     else {
         echo "неправильный логгин или пароль";
