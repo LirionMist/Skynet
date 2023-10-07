@@ -2,7 +2,7 @@
 
     if( $_SERVER['REQUEST_METHOD'] !== 'POST' ) exit;
 
-    $link = "<a href ='index.php'><button>На главную</button></a>" ;
+    $link = "<a href ='index.php'><button>Back</button></a>" ;
     
     if(empty($_POST['login']) || empty($_POST['password'])) {
         echo "Необходимые поля не зполнены";
@@ -24,15 +24,20 @@
     $pwd = $_POST['password'];
     $pwd_hash = password_hash($pwd, PASSWORD_DEFAULT);
 
-    $select = $connection->prepare( "SELECT `password` FROM `users` WHERE `login` = ?;" ); 
-    $res = $select->execute([ $_POST['login'] ] );
-
-        if(!$res ){
-            exit( 'неправильный логин или пароль');
-        }
-
+    $userLogin = $_POST['login'];
+    $userPassword = $_POST['password'];
+    
+    $select = $connection->prepare("SELECT `password` FROM `users` WHERE `login` = ? or `email` = ?;");
+    $select->execute([$userLogin, $userLogin]);
+    $row = $select->fetch();
+    
+    if ($row && password_verify($userPassword, $row['password'])) exit("login successful");
+    
+    else {
+        echo "неправильный логгин или пароль";
+    }
     ?>
 
  <form action="index.php" method="post">
- <p style="text-align: left"><button>На главную</button>
+ <p style="text-align: left"><button>Back</button>
 </form>
