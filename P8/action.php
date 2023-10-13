@@ -1,5 +1,6 @@
 <?php 
-
+    session_start();
+    
     if( $_SERVER['REQUEST_METHOD'] !== 'POST' ) exit;
 
     $link = "<a href ='index.php'><button>Back</button></a>" ;
@@ -22,7 +23,7 @@
             die("Ошибка подключения: " . $e->getMessage());
         }
 
-    session_start();
+
     $_SESSION["login"]=$_POST['login'];
 
     $pwd = $_POST['password'];
