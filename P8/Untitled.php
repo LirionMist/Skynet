@@ -1,6 +1,6 @@
 <?php 
     session_start();
-    echo $_SESSION ["login"];
+    echo "You'r Login: ".$_SESSION ["login"];
 
 ?>
  <form action="index.php" method="post">
