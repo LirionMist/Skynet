@@ -1,16 +1,9 @@
-let userLoogin = prompt("Введите логин");
+let Time = prompt("Введите время в часах");
 let wrongMessage = "доступ закрыт";
 
-if (userLoogin =='Админ'|| userLoogin =='admin'){
-    let password = prompt('Введите пароль');
-
-    if (password =='Я главный'){
-        alert('Здраствуйте!')
-    }
-    else{
-        alert(wrongMessage);
-    }
+if (Time < 9|| Time > 17){
+    alert('Колледж закрыт')
 }
 else{
-    alert(wrongMessage);
+    alert('Колледж открыт');
 }
