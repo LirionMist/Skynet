@@ -17,3 +17,5 @@ else{
     alert(message);
 }
 
+
+let array = ['a'];
