@@ -1,9 +1,8 @@
 let userString = prompt("Введите любое значение");
-let correctMessage = "верно";
-let wrongMessage = "неверно";
+let summ = 0;
 
-if (userString[0] === "1" || userString[0] === "2" || userString[0] === "3") {
-    alert(correctMessage);
-} else {
-    alert(wrongMessage);
+for (let i = 0; i < 3; i++) {
+    summ = summ + +userString[i];
 }
+
+alert('сумма равна ' + summ);
