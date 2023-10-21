@@ -1,20 +1,8 @@
-let userString = prompt("Введите любое значение");
-let summOfFirstHalf = 0;
-let summOfSecondHalf = 0;
+let mass = [2, 5, 9, 15, 0, 4];
+let paragraph = document.getElementById("myParagraph");
 
-let correctMessage = "верно";
-let wrongMessage = "неверно";
-
-for (let i = 0; i < 3; i++) {
-    summOfFirstHalf = summOfFirstHalf + +userString[i];
-}
-
-for (let i = 3; i < 6; i++) {
-    summOfSecondHalf = summOfSecondHalf + +userString[i];
-}
-
-if (summOfFirstHalf === summOfSecondHalf) {
-    alert(correctMessage);
-} else {
-    alert(wrongMessage);
+for (let i = 0; i < mass.length; i++) {
+    if (mass[i] > 3 && mass[i] < 10) {
+        paragraph.innerHTML = paragraph.innerHTML + "<br>" + mass[i];
+    }
 }
