@@ -19,24 +19,27 @@ for (let index = 0; index < person.degree.length; index++) {
 }
 
 paragraph.innerHTML = '<h2>' + person.surname + ' ' + person.name + ' ' + person.patronymic + '</h2>';
-paragraph.innerHTML = paragraph.innerHTML + "<i>" + "Должность: " + "</i>" + person.occupation + '<br>';
-paragraph.innerHTML = paragraph.innerHTML + "<i>" + "Уровень образования: " + "</i>" + person.degree + '<br>';
-paragraph.innerHTML = paragraph.innerHTML + "<i>" + "Категория: " + "</i>" + person.category + '<br>';
-paragraph.innerHTML = paragraph.innerHTML + "<i>" + "Образование: " + "</i>" + person.education + '<br>';
-paragraph.innerHTML = paragraph.innerHTML + "<i>" + "Дисциплина: " + "</i>" + "<ul>" + disciplinePointText + "</ul>" + '<br>';
+paragraph.innerHTML += "<i>" + "Должность: " + "</i>" + person.occupation + '<br>';
+paragraph.innerHTML += "<i>" + "Уровень образования: " + "</i>" + person.degree + '<br>';
+paragraph.innerHTML += "<i>" + "Категория: " + "</i>" + person.category + '<br>';
+paragraph.innerHTML += "<i>" + "Образование: " + "</i>" + person.education + '<br>';
+paragraph.innerHTML += "<i>" + "Дисциплина: " + "</i>" + "<ul>" + disciplinePointText + "</ul>" + '<br>';
 
-paragraph.innerHTML = paragraph.innerHTML + "<i>" + "Примечание: " + "</i>" + person.note;
+paragraph.innerHTML += "<i>" + "Примечание: " + "</i>" + person.note;
 
 function getRandomColorValue() {
-    return Math.floor(Math.random() * 256);
+    return Math.floor(Math.random() * 255);
 }
 
-for (let index = 1; index <= person.degree.length; index++) {
-    let coloresdPointDrop = document.querySelector(`body > p > ul > li:nth-child(${index})`);
+let coloresdPointDrop = document.querySelectorAll(`li`);
+
+for (let index = 0; index <= person.degree.length; index++) {
+
+    let point = coloresdPointDrop[index];
 
     let red = getRandomColorValue();
     let green = getRandomColorValue();
     let blue = getRandomColorValue();
 
-    coloresdPointDrop.style.color = `rgb(${red}, ${green}, ${blue})`;
+    point.style.color = `rgb(${red}, ${green}, ${blue})`;
 }

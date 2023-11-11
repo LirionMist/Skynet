@@ -1,1 +1,0 @@
-let coloresdPointDrop = document.querySelector(body > p > ul);
