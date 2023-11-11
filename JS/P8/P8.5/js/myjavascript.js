@@ -13,7 +13,7 @@ let person = {
 
 };
 
-let disciplinePointText;
+let disciplinePointText = '';
 for (let index = 0; index < person.degree.length; index++) {
     disciplinePointText = disciplinePointText + "<li>" + person.degree[index] + "</li>";
 }
