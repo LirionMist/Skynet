@@ -33,7 +33,7 @@ function getRandomColorValue() {
 
 let coloresdPointDrop = document.querySelectorAll(`li`);
 
-for (let index = 0; index <= person.degree.length; index++) {
+for (let index = 0; index < person.degree.length; index++) {
 
     let point = coloresdPointDrop[index];
 
