@@ -16,8 +16,6 @@ function addTextToHtml(findElementByClass, textElement, tag) {
     document.body.appendChild(block); 
 }
 
+addTagsToHtml('header', 'header'); 
 
-addTagsToHtml('main', 'content'); 
-
-addTextToHtml('content','Практика 9', 'h1');
 
