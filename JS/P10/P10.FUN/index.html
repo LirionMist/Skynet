@@ -52,16 +52,23 @@
     .mouseMovie {
         background-color: rgb(0, 115, 170);
     }
+
+    input placeholder { /* Edge 12-18 */
+        color: red;
+    }
+
 </style>
 
 <body>
 
-    <input value="🟥🔴❌🔻й" onclick="alert('Сообщениее ненормотивной лексики')" type="button">
-    <br>
+    <input value="🟥🔴❌🔻й" onclick="alert('Сообщениее ненормотивной лексики')" type="button"><br>
 
     <button class="mouseMovie">Двигай мышь!</button><br>
-    <button class="RandomColor">Кликните чтобы продолжить</button>
-
+    <input class="writeLn" placeholder="Кликните здесь, затем нажмите клавишу." size="40" /><br>
+    <input class="writeLnForSpace" placeholder="Нажмите пробел" size="40" /><br>
+    <button class="RandomColor">Кликните чтобы продолжить</button><br>
+    <button class="RandomColor" onclick="showHide()">Показать\Свернуть</button><br>
+    
     <script src="js/myjavascript.js"></script>
 
 </html>
