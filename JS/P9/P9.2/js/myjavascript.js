@@ -36,6 +36,9 @@ function addTemplateToHtml(textElementTitle, textElement) {
 
 addTemplateToHtml('Dolor sit amet', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend sem a ligula sagittis, ac finibus mauris aliquet. ');
 
+
+addTemplateToHtml('PapichNuts', 'Открою тебе секрет - кем бы вы ни были, у всех вас нету будущего. То есть, так же само, как у тебя эээ, ни у кого нету будущего. По вселенским масштабам нет ни у кого никакого будущего. То есть, вы, вы являетесь примитивным организмом. Вы всего лишь жалкие людишки. Занимайся тем, что тебе приносит удовольствие просто, займись какой-то физкультурой. Вот мне, мне, лично, всегда помогает физкультура. Я не могу понять, как вообще, как, как можно не заниматься физкультурой и как кому-то может не помогать физкультура, потому что по дефолту, когда делаешь какие-то физические упражнения, когда ты эээ, двигаешься. Движение же - это, по сути, жизнь. Когда ты сидишь на месте и грустишь - это, ну, как бы. Это антоним жизни. Это, это, конечно, еще не смерть, но явное движение, наверное, к смерти. Когда ты двигаешься, у тебя, организм начинает, ну, как бы, жить. И ты по-любому получаешь плюс мораль, ты получаешь, ту, ты чувствуешь, ну, внутри себя тепло. Ты живешь.');
+
 addTemplateToHtml('Aliquam eleifend', 'Aliquam eleifend consequat purus, a tincidunt odio vehicula eget. Sed sollicitudin, urna vitae elementum iaculis, leo tellus tristique tortor, quis condimentum justo sem sit amet sem. Fusce mattis metus metus, sed egestas tellus faucibus quis.  ');
 
 addTemplateToHtml('Nunc a ante feugiat', 'Nunc a ante feugiat, hendrerit nunc sed, tristique ipsum. In hac habitasse platea dictumst. Etiam dapibus mattis nulla a consequat. Phasellus nec nunc et dui condimentum tristique.   ');
